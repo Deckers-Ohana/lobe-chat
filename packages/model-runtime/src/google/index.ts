@@ -133,7 +133,7 @@ export class LobeGoogleAI implements LobeRuntimeAI {
       const thinkingConfig: ThinkingConfig = {
         includeThoughts:
           !!thinkingBudget ||
-          (!thinkingBudget && model && (model.includes('-2.5-') || model.includes('thinking')))
+            (!thinkingBudget && model && (model.includes('-2.5-') || model.includes('thinking')))
             ? true
             : undefined,
         // https://ai.google.dev/gemini-api/docs/thinking#set-budget

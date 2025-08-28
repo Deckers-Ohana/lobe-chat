@@ -17,17 +17,17 @@ import { WindowsDispatchEvents } from './windows';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ClientDispatchEvents
   extends WindowsDispatchEvents,
-    SystemDispatchEvents,
-    MenuDispatchEvents,
-    LocalFilesDispatchEvents,
-    AutoUpdateDispatchEvents,
-    ShortcutDispatchEvents,
-    RemoteServerDispatchEvents,
-    UploadFilesDispatchEvents,
-    TrayDispatchEvents,
-    DesktopSettingsDispatchEvents,
-    NotificationDispatchEvents,
-    ProtocolDispatchEvents {}
+  SystemDispatchEvents,
+  MenuDispatchEvents,
+  LocalFilesDispatchEvents,
+  AutoUpdateDispatchEvents,
+  ShortcutDispatchEvents,
+  RemoteServerDispatchEvents,
+  UploadFilesDispatchEvents,
+  TrayDispatchEvents,
+  DesktopSettingsDispatchEvents,
+  NotificationDispatchEvents,
+  ProtocolDispatchEvents { }
 
 export type ClientDispatchEventKey = keyof ClientDispatchEvents;
 
@@ -41,9 +41,9 @@ export type ClientEventReturnType<T extends ClientDispatchEventKey> = ReturnType
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface MainBroadcastEvents
   extends AutoUpdateBroadcastEvents,
-    RemoteServerBroadcastEvents,
-    SystemBroadcastEvents,
-    ProtocolBroadcastEvents {}
+  RemoteServerBroadcastEvents,
+  SystemBroadcastEvents,
+  ProtocolBroadcastEvents { }
 
 export type MainBroadcastEventKey = keyof MainBroadcastEvents;
 

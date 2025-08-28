@@ -557,18 +557,18 @@ export const generateAIChat: StateCreator<
     preprocessMsgs = !chatConfig.inputTemplate
       ? preprocessMsgs
       : preprocessMsgs.map((m) => {
-          if (m.role === 'user') {
-            try {
-              return { ...m, content: compiler({ text: m.content }) };
-            } catch (error) {
-              console.error(error);
+        if (m.role === 'user') {
+          try {
+            return { ...m, content: compiler({ text: m.content }) };
+          } catch (error) {
+            console.error(error);
 
-              return m;
-            }
+            return m;
           }
+        }
 
-          return m;
-        });
+        return m;
+      });
 
     // 3. add systemRole
     if (agentConfig.systemRole) {

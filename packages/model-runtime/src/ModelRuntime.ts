@@ -106,8 +106,8 @@ export class ModelRuntime {
     provider: string,
     params: Partial<
       ClientOptions &
-        LobeBedrockAIParams &
-        LobeCloudflareParams & { apiKey?: string; apiVersion?: string; baseURL?: string }
+      LobeBedrockAIParams &
+      LobeCloudflareParams & { apiKey?: string; apiVersion?: string; baseURL?: string }
     >,
   ) {
     // @ts-expect-error runtime map not include vertex so it will be undefined

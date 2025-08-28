@@ -81,7 +81,7 @@ export const createAsyncCaller = async (
     const httpClient = await createAsyncServerClient(userId, jwtPayload);
     const createRecursiveProxy = (client: any, path: string[]): any => {
       // The target is a dummy function, so that 'apply' can be triggered.
-      return new Proxy(() => {}, {
+      return new Proxy(() => { }, {
         apply: (target, thisArg, args) => {
           // 'apply' is triggered by the function call `(...)`.
           // The `path` at this point is the full path to the procedure.
