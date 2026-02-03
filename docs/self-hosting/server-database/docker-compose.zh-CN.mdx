@@ -127,6 +127,13 @@ bash <(curl -fsSL https://lobe.li/setup.sh) -l zh_CN
 
 ### 端口模式
 
+<Callout type="warning">
+  如果你把服务映射到 1-1023 这样的特权端口（例如 443），Docker 可能会报
+  "listen tcp 127.0.0.1:443: bind: permission denied"。
+  请改用更高的端口（例如 8443）并同步更新 APP_URL/AUTH_URL，
+  或保持 3210 并用反向代理对外提供 443。
+</Callout>
+
 <Steps>
   ### 在交互式脚本中完成剩余配置
 
