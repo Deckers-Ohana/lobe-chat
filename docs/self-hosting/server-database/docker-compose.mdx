@@ -132,6 +132,13 @@ The script supports the following deployment modes; please choose the appropriat
 
 ### Port Mode
 
+<Callout type="warning">
+  If you map services to privileged ports (1-1023), Docker may fail with
+  "listen tcp 127.0.0.1:443: bind: permission denied". Use a higher port
+  (for example 8443) and update APP_URL/AUTH_URL, or keep 3210 and use a
+  reverse proxy to serve 443.
+</Callout>
+
 <Steps>
   ### Complete Remaining Configuration in Interactive Script
 

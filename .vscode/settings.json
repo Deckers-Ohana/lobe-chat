@@ -19,6 +19,12 @@
         // useless to search this big folder
         "locales": true
     },
+    "files.exclude": {
+        "**/.git": false,
+        "**/.git/objects": true,
+        "**/.git/refs": true,
+        "**/.git/logs": true
+    },
     "vitest.maximumConfigs": 6,
     "workbench.editor.customLabels.patterns": {
         "**/app/**/[[]*[]]/[[]*[]]/page.tsx": "${dirname(2)}/${dirname(1)}/${dirname} • page component",
